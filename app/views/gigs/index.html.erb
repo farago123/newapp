@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Gigs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Location</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gigs.each do |gig| %>
+      <tr>
+        <td><%= gig.title %></td>
+        <td><%= gig.location %></td>
+        <td><%= gig.date %></td>
+        <td><%= link_to 'More Details', gig %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+ 
+<%= link_to 'Back', '/' %> 
